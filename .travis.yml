@@ -4,4 +4,4 @@ sudo: required
 
 script:
  - (cd Default && make all)
- - sudo bash ./Default/test-travis
+ - ./Default/test-travis
