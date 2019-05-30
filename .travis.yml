@@ -1,4 +1,4 @@
 compiler: gcc
 
 script:
-	(cd Default && make all)
+ (cd Default && make all)
