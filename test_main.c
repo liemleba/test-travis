@@ -17,6 +17,8 @@ void fun1(struct workq_item *item)
 	if (++func_call[0] >= 100) {
 		workq_cancel(&wq_main, item);
 		++test_done;
+	} else {
+		printf("executed fun1!\n");
 	}
 }
 
@@ -25,6 +27,8 @@ void fun2(struct workq_item *item)
 	if (++func_call[1] >= 300) {
 		workq_cancel(&wq_main, item);
 		++test_done;
+	} else {
+		printf("executed fun2!\n");
 	}
 }
 
@@ -33,6 +37,8 @@ void fun3(struct workq_item *item)
 	if (++func_call[2] >= 150) {
 		workq_cancel(&wq_main, item);
 		++test_done;
+	} else {
+		printf("executed fun3!\n");
 	}
 }
 
@@ -48,7 +54,7 @@ int main(void)
 	workq_post_delayed(&wq_main, &wqi_item2, 1000);
 	workq_post_delayed(&wq_main, &wqi_item3, 2000);
 
-	while (test_done<3) {
+	while (test_done < 3) {
 		if (workq_iterate(&wq_main, tick) == 0) {
 			//Sleep
 		}
@@ -57,6 +63,6 @@ int main(void)
 			workq_time_overflowed(&wq_main);
 		}
 	}
-	printf("test-successful!");
+	printf("test-passed!");
 	return 0;
 }
