@@ -63,6 +63,6 @@ int main(void)
 			workq_time_overflowed(&wq_main);
 		}
 	}
-	printf("test-passed!");
+	printf("test-passed!\r\n");
 	return 0;
 }
