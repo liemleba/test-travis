@@ -1,8 +1,6 @@
-language: cpp
+language: c
 
 compiler: gcc
-
-sudo: required
 
 script:
  - (cd Default && make all)
