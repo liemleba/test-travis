@@ -46,6 +46,7 @@ test-travis: $(OBJS) $(USER_OBJS)
 	g++  -o "test-travis" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
+	@./test-travis
 
 # Other Targets
 clean:
