@@ -2,3 +2,4 @@ compiler: gcc
 
 script:
  (cd Default && make all)
+ ./Default/test-travis
