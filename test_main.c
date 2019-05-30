@@ -58,5 +58,5 @@ int main(void)
 		}
 	}
 	printf("test-successful!");
-	return 666;
+	return 0;
 }
