@@ -1,6 +1,7 @@
 #include "workq.h"
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 
 static unsigned int func_call[3];
 static volatile uint32_t tick;
@@ -56,6 +57,6 @@ int main(void)
 			workq_time_overflowed(&wq_main);
 		}
 	}
-
+	printf("test-successful!");
 	return 666;
 }
