@@ -47,6 +47,7 @@ test-travis: $(OBJS) $(USER_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	@./test-travis
+	@echo ' '
 
 # Other Targets
 clean:
