@@ -1,5 +1,4 @@
 compiler: gcc
 
 script:
-  - make
-  - make test
+	(cd Default && make all)
