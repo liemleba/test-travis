@@ -45,7 +45,6 @@ test-travis: $(OBJS) $(USER_OBJS)
 	@echo 'Invoking: Cross G++ Linker'
 	g++  -o "test-travis" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
-	@echo ' '
 	@./test-travis
 	@echo ' '
 
