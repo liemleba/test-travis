@@ -1,3 +1,15 @@
+matrix:
+  include:
+    # works on Precise and Trusty
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5.4
+      env:
+         - MATRIX_EVAL="CC=gcc-5.4 && CXX=g++-5.4"
 language: c
 
 compiler: gcc
